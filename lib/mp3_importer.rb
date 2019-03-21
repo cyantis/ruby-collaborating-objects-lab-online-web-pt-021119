@@ -1,5 +1,3 @@
-require 'pry'
-
 class MP3Importer
   attr_accessor :path
 
@@ -9,7 +7,6 @@ class MP3Importer
 
   def files
     files = Dir.glob("#{@path}/*.mp3").collect {|f| f.split("mp3s/")[1]}
-    binding.pry
   end
 
   def import
