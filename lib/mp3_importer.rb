@@ -11,8 +11,8 @@ class MP3Importer
     files = Dir.glob("#{@path}/*.mp3").collect {|f| f.split("mp3s/")[1]}
   end
 
-  def import(*files)
-    files.each {|f| f = Song.new(files)}
+  def import
+    self.files.each {|f| f = Song.new(files)}
   end
 
 end
