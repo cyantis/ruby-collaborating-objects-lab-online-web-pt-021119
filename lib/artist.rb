@@ -13,13 +13,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    if self.all.find {|n| n.name == name}
-      self.all.find {|n| n.name == name}
-    else
-      artist = self.new(name)
-      artist.save
-      artist
-    end
+    self.all.find {|n| n.name == name} ? self.all.find {|n| n.name == name} : self.new(name).tap {|s| s.save}
   end
 
   def songs
