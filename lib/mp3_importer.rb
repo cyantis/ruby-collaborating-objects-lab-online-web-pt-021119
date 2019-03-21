@@ -9,8 +9,7 @@ class MP3Importer
 
   def files
     files = Dir.glob("#{@path}/*.mp3")
-    files.each {|f| f.split("mp3s/")[1]}
-    binding.pry
+    files.collect {|f| f.split("mp3s/")[1]}
   end
 
   def import
