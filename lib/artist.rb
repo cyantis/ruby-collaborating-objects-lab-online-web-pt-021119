@@ -17,8 +17,8 @@ class Artist
       self.all.find {|n| n.name == name}
     else
       artist = self.new(name)
-      #artist.save
-      #artist
+      artist.save
+      artist
     end
   end
 
