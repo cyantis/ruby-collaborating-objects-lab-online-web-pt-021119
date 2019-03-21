@@ -6,7 +6,7 @@ class MP3Importer
   end
 
   def files
-    files = Dir.glob("/*.mp3")
+    files = Dir.glob("./spec/fixtures/*.mp3")
   end
 
   def import
