@@ -6,7 +6,7 @@ class MP3Importer
   end
 
   def files
-    files = Dir.MP3Importer.new('./spec/fixtures/*.mp3')
+    files = Dir.MP3Importer('./spec/fixtures/*.mp3')
 
   end
 
