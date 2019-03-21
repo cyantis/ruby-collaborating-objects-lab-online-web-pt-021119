@@ -13,7 +13,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    self.all.find {|n| n.name == name} ? self.all.find {|n| n.name == name} : self.new(name).tap
+    self.all.find {|n| n.name == name} ? self.all.find {|n| n.name == name} : self.new(name)
   end
 
   def songs
