@@ -13,8 +13,12 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    self.all.find {|n| n.name == name} ? name : artist = self.new(name)
+    self.all.find {|n| n.name == name} ? name : self.create(name)
   end
+
+  def self.create(name)
+  self.new(name).tap {|artist| artist.save}
+end
 
   def songs
     @songs
